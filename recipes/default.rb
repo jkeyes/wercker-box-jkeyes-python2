@@ -68,3 +68,7 @@ end
 easy_install_package "pip" do
   action :install
 end
+
+package "nodejs" do
+  action :install
+end
