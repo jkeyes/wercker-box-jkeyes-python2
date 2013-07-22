@@ -6,5 +6,3 @@ build :
         code : |
           cd $WERCKER_ROOT
           berks install -p cookbooks
-          which pip
-          
