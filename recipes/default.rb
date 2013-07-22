@@ -65,6 +65,6 @@ bash "setup easy_install" do
   EOF
 end
 
-# easy_install_package "pip" do
-#   action :install
-# end
+easy_install_package "pip" do
+  action :install
+end
