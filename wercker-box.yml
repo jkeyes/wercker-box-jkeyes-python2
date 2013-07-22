@@ -25,3 +25,4 @@ script: |
   cd $HOME
   rm -fr nodeinstall
   node -v
+  npm -v
