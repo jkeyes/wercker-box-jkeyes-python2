@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.5
+version: 0.0.6
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -27,3 +27,4 @@ script: |
   node -v
   npm -v
   python -V
+  sudo npm install less -g
