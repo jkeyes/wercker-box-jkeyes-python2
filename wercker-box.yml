@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.3
+version: 0.0.4
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -8,32 +8,20 @@ keywords:
   - python
   - python 2.7.5
 packages :
-  - python 2.7.5
-script : sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
-
-box-detect:
-  priority : 901
-  version :
-  detect:
-    - files:
-      - requirements.txt
-    - files:
-      - setup.py
-
-default-build:
-  python:
-    priority : 51
-    detect:
-      - default: true
-    text-to-append: |
-      # Build definition
-      build:
-        # The steps that will be executed on build
-        steps:
-          # A custom script step, name value is used in the UI
-          # and the code value contains the command that get executed
-          - script:
-              name: echo python information
-              code: |
-                echo "python version $(python --version) running"
-                echo "pip version $(pip --version) running"
+  - python@2.7.5
+script: |
+  export NODEVERSION=0.10.11
+  sudo apt-get update
+  sudo apt-get install wget build-essential
+  cd $HOME
+  mkdir nodeinstall
+  cd nodeinstall
+  wget http://nodejs.org/dist/v$NODEVERSION/node-v$NODEVERSION.tar.gz
+  tar xzvf node-v$NODEVERSION.tar.gz
+  cd node-v$NODEVERSION
+  ./configure
+  make
+  sudo make install
+  cd $HOME
+  rm -fr nodeinstall
+  node -v
