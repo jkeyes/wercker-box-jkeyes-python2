@@ -7,4 +7,3 @@ cookbook 'wercker-aptkey', git: 'https://github.com/wercker/wercker-aptkey-cookb
 
 cookbook 'apt', '= 1.8.0'
 cookbook 'build-essential'
-cookbook 'jkeyes-python2'
