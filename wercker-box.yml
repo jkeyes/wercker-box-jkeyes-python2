@@ -26,3 +26,4 @@ script: |
   rm -fr nodeinstall
   node -v
   npm -v
+  python -V
