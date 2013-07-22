@@ -20,7 +20,7 @@ end
 
 
 version = "2.7.5"
-verion_short = version[0, version.length - 2]
+version_short = version[0, version.length - 2]
 configure_options = ""
 
 
@@ -64,6 +64,6 @@ bash "setup easy_install" do
   EOF
 end
 
-easy_install_package "pip" do
-  action :install
-end
+# easy_install_package "pip" do
+#   action :install
+# end
