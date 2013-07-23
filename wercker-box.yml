@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.7
+version: 0.0.8
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -28,4 +28,5 @@ script: |
   npm -v
   python -V
   sudo npm install less -g
-  sudo pip install Pillow
+  sudo pip install Pillow==2.1.0
+  sudo pip install psycopg2==2.5.1
