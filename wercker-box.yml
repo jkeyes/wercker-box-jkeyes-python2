@@ -28,3 +28,4 @@ script: |
   npm -v
   python -V
   sudo npm install less -g
+  sudo pip install Pillow
