@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.9
+version: 0.0.10
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -12,7 +12,7 @@ packages :
 script: |
   export NODEVERSION=0.10.11
   sudo apt-get update
-  sudo apt-get install wget build-essential
+  sudo apt-get install wget build-essential libmemcached-dev
   cd $HOME
   mkdir nodeinstall
   cd nodeinstall
@@ -36,3 +36,4 @@ script: |
   sudo pip install gevent==0.13.7
   sudo pip install lxml==3.0
   sudo pip install coverage==3.6
+  sudo pip install Django==1.4.5
