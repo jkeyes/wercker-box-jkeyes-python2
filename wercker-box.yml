@@ -29,7 +29,7 @@ script: |
   node -v
   npm -v
   python -V
-  cd $HOME
+  cd $WERCKER_SOURCE_DIR
   ls -la
   sudo npm install less -g
   sudo pip install -r requirements.txt
