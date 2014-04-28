@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.12
+version: 0.0.13
 inherits: wercker/ubuntu12.04-webessentials@0.0.13
 type : main
 platform : ubuntu@12.04
@@ -32,4 +32,5 @@ script: |
   cd $WERCKER_SOURCE_DIR
   ls -la
   sudo npm install less -g
+  sudo gem install sass
   sudo pip install -r requirements.txt
