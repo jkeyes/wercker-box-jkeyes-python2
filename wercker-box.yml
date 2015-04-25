@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.14
+version: 0.0.15
 inherits: wercker/ubuntu12.04-webessentials@0.0.13
 type : main
 platform : ubuntu@12.04
@@ -14,7 +14,15 @@ script: |
   ls -al
   export NODEVERSION=0.10.11
   sudo apt-get update
+  sudo apt-get install -y gcc-multilib g++-multilib libffi-dev libffi6 libffi6-dbg python-crypto python-mox3 python-pil python-ply libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libgdbm-dev dpkg-dev quilt autotools-dev libreadline-dev libtinfo-dev libncursesw5-dev tk-dev blt-dev libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libsqlite3-dev libgpm2 mime-support netbase net-tools bzip2
   sudo apt-get install wget build-essential libmemcached-dev
+  cd $HOME
+  wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
+  tar xfz Python-2.7.9.tgz
+  cd Python-2.7.9/
+  ./configure --prefix /usr/local/lib/python2.7.9 --enable-ipv6
+  make
+  sudo make install
   cd $HOME
   mkdir nodeinstall
   cd nodeinstall
