@@ -19,7 +19,7 @@
 end
 
 
-version = "2.7.5"
+version = "2.7.9"
 version_short = version[0, version.length - 2]
 configure_options = ""
 
