@@ -19,6 +19,7 @@ script: |
   sudo apt-get install wget build-essential libmemcached-dev
   sudo apt-get install -y nodejs npm
   sudo apt-get install -y libpq-dev
+  sudo apt-get install -y libevent-dev 
   python -V
   which python
   cd $HOME
