@@ -19,6 +19,7 @@ script: |
   sudo apt-get install wget build-essential libmemcached-dev
   sudo apt-get install -y nodejs npm
   python -V
+  which python
   cd $HOME
   wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
   tar xfz Python-2.7.9.tgz
@@ -26,6 +27,9 @@ script: |
   ./configure --enable-ipv6
   make
   sudo make install
+  sudo ln -s /usr/local/bin/python2.7 /usr/bin/python
+  which python
+  python -V
   cd $HOME
   nodejs -v
   npm -v
