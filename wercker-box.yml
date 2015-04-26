@@ -18,7 +18,7 @@ script: |
   sudo apt-get install ruby
   sudo apt-get install wget build-essential libmemcached-dev
   sudo apt-get install -y nodejs npm
-  sudo apt-get install -y postgresql-devel
+  sudo apt-get install -y libpq-dev
   python -V
   which python
   cd $HOME
