@@ -17,6 +17,7 @@ script: |
   sudo apt-get install -y gcc-multilib g++-multilib libffi-dev libffi6 libffi6-dbg python-crypto python-mox3 python-pil python-ply libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libgdbm-dev dpkg-dev quilt autotools-dev libreadline-dev libtinfo-dev libncursesw5-dev tk-dev blt-dev libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libsqlite3-dev libgpm2 mime-support netbase net-tools bzip2
   sudo apt-get install ruby
   sudo apt-get install wget build-essential libmemcached-dev
+  sudo apt-get install -y nodejs
   cd $HOME
   wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
   tar xfz Python-2.7.9.tgz
@@ -25,16 +26,6 @@ script: |
   make
   sudo make install
   cd $HOME
-  mkdir nodeinstall
-  cd nodeinstall
-  wget http://nodejs.org/dist/v$NODEVERSION/node-v$NODEVERSION.tar.gz
-  tar xzvf node-v$NODEVERSION.tar.gz
-  cd node-v$NODEVERSION
-  ./configure
-  make
-  sudo make install
-  cd $HOME
-  rm -fr nodeinstall
   node -v
   npm -v
   python -V
