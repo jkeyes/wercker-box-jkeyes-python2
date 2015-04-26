@@ -38,4 +38,6 @@ script: |
   ls -la
   sudo npm install less -g
   sudo gem install sass
+  sudo python -m ensurepip
+  which pip
   sudo pip install -r requirements.txt
