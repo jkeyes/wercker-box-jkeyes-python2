@@ -37,7 +37,7 @@ script: |
   which python
   python -V
   cd $HOME
-  sudo ln -f -s /usr/local/bin/nodejs /usr/bin/node
+  sudo ln -f -s /usr/bin/nodejs /usr/bin/node
   ls -al /usr/bin
   which nodejs
   nodejs -v
