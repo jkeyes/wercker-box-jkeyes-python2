@@ -15,14 +15,15 @@ script: |
   export NODEVERSION=0.10.11
   sudo apt-get update
   sudo apt-get install -y gcc-multilib g++-multilib libffi-dev libffi6 libffi6-dbg python-crypto python-mox3 python-pil python-ply libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libgdbm-dev dpkg-dev quilt autotools-dev libreadline-dev libtinfo-dev libncursesw5-dev tk-dev blt-dev libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libsqlite3-dev libgpm2 mime-support netbase net-tools bzip2
-  sudo apt-get install ruby
-  sudo apt-get install wget build-essential libmemcached-dev
+  sudo apt-get install -y ruby
+  sudo apt-get install -y wget build-essential libmemcached-dev
   sudo apt-get install -y nodejs npm
   sudo apt-get install -y libpq-dev
   sudo apt-get install -y libevent-dev
-  sudo apt-get install libxml2-dev libxslt1-dev
+  sudo apt-get install -y libxml2-dev libxslt1-dev
   sudo apt-get install -y git
   sudo apt-get install -y phantomjs
+  sudo apt-get install -y default-jdk
   python -V
   which python
   cd $HOME
