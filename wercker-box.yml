@@ -37,7 +37,9 @@ script: |
   which python
   python -V
   cd $HOME
+  sudo ln -f -s /usr/local/bin/nodejs /usr/bin/node
   nodejs -v
+  node -v
   npm -v
   python -V
   cd $WERCKER_SOURCE_DIR
