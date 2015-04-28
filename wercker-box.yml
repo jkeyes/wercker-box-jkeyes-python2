@@ -22,13 +22,9 @@ script: |
   sudo apt-get install -y libevent-dev
   sudo apt-get install libxml2-dev libxslt1-dev
   sudo apt-get install -y git
+  sudo apt-get install -y phantomjs
   python -V
   which python
-  cd $HOME
-  git clone git://github.com/ariya/phantomjs.git
-  cd phantomjs
-  git checkout 2.0
-  ./build.sh
   cd $HOME
   wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
   tar xfz Python-2.7.9.tgz
