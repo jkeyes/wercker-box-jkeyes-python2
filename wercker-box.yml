@@ -1,5 +1,5 @@
 name: jkeyes-python-2
-version: 0.0.18
+version: 0.0.19
 inherits: tvaughan/ubuntu14.04@1.0.1
 type : main
 platform : ubuntu@12.04
@@ -24,6 +24,11 @@ script: |
   sudo apt-get install -y git
   python -V
   which python
+  cd $HOME
+  git clone git://github.com/ariya/phantomjs.git
+  cd phantomjs
+  git checkout 2.0
+  ./build.sh
   cd $HOME
   wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
   tar xfz Python-2.7.9.tgz
